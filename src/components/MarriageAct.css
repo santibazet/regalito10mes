@@ -1,0 +1,98 @@
+body { 
+  margin: 0; /* Eliminar márgenes por defecto */
+  padding: 0; /* Eliminar padding por defecto */
+  background: url('../assets/images/patron.png') repeat; /* Fondo de patrón */
+  background-size: 300px 300px;
+}
+
+/* Contenedor principal */
+.act-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Alto completo de la ventana */
+  padding: 20px; /* Espaciado interno del contenedor */
+}
+
+/* Carta de declaración */
+.letter {
+  z-index: 1; /* La carta estará en frente del fondo */
+  background: linear-gradient(145deg, #f4f4f4, #e0e0e0); /* Fondo suave */
+  border: 2px solid #c0c0c0; /* Borde que simula papel */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra */
+  padding: 20px 30px; /* Espaciado interno */
+  max-width: 600px; /* Ancho máximo */
+  max-height: 80vh; /* Altura máxima */
+  overflow-y: auto; /* Scroll vertical si es necesario */
+  text-align: left; /* Texto alineado a la izquierda */
+  position: relative; /* Posicionamiento relativo */
+  margin: 20px; /* Margen alrededor de la carta */
+  animation: fadeIn 1.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  text-align: center;
+  color: #3d3d3d; /* Color oscuro */
+  font-family: 'Georgia', serif; /* Fuente elegante */
+  font-size: 2rem; /* Tamaño del título */
+  margin-bottom: 15px; /* Espaciado inferior */
+}
+
+p {
+  color: #4d4d4d; /* Color del texto */
+  line-height: 1.6; /* Espaciado entre líneas */
+}
+
+ul {
+  margin: 10px 0; /* Margen superior e inferior */
+  padding-left: 20px; /* Espaciado izquierdo */
+}
+
+ul li {
+  margin-bottom: 8px; /* Espaciado inferior entre ítems */
+}
+
+/* Botón de huella dactilar dentro de la carta */
+.fingerprint-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto; /* Centrar el botón */
+  width: 80px; /* Tamaño del botón */
+  height: 80px; /* Tamaño del botón */
+  background-color: #e0e0e0; /* Fondo del botón */
+  border-radius: 50%; /* Hacer el botón circular */
+  cursor: pointer;
+  transition: transform 0.3s; /* Transición suave al hacer hover */
+}
+
+.fingerprint-button:hover {
+  transform: scale(1.1); /* Efecto de aumento al hacer hover */
+}
+
+.fingerprint-button img {
+  width: 60px; /* Tamaño de la imagen */
+  height: 60px; /* Tamaño de la imagen */
+}
+
+/* Texto del botón */
+.button-text {
+  margin-top: 10px; /* Espaciado entre botón y texto */
+  font-size: 1rem; /* Tamaño del texto */
+  color: #333;
+  text-align: center; /* Centrar el texto */
+}
