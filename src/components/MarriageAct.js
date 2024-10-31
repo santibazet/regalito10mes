@@ -69,8 +69,9 @@ const MarriageAct = ({ onFingerprintHold }) => {
           onMouseDown={() => setIsHolding(true)}
           onMouseUp={() => setIsHolding(false)}
           onMouseLeave={() => setIsHolding(false)}
-          onTouchStart={() => setIsHolding(true)} // Agrega eventos para móvil
-          onTouchEnd={() => setIsHolding(false)}   // Agrega eventos para móvil
+          onTouchStart={() => setIsHolding(true)} 
+          onTouchEnd={() => setIsHolding(false)}  
+          onContextMenu={(e) => e.preventDefault()} // Evita el menú contextual
         >
           <img src={fingerprintImage} alt="Fingerprint" />
         </div>
