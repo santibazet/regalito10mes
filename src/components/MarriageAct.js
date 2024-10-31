@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importar useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import './MarriageAct.css';
 import fingerprintImage from '../assets/images/fingerprint.png';
 import LoadingScreen from './LoadingScreen';
@@ -44,7 +44,7 @@ const MarriageAct = ({ onFingerprintHold }) => {
 
   return (
     <div className="act-container">
-      <div className="background-blur" /> {/* Elemento de fondo difuminado */}
+      <div className="background-blur" /> 
       <div className="letter">
         <h2>Declaración de Amor de la Princesa Avril Villaró</h2>
         <p>Yo, la princesa Avril Villaró, juro y declaro formalmente en mis plenas facultades mentales a mi novio que:</p>
@@ -69,6 +69,8 @@ const MarriageAct = ({ onFingerprintHold }) => {
           onMouseDown={() => setIsHolding(true)}
           onMouseUp={() => setIsHolding(false)}
           onMouseLeave={() => setIsHolding(false)}
+          onTouchStart={() => setIsHolding(true)} // Agrega eventos para móvil
+          onTouchEnd={() => setIsHolding(false)}   // Agrega eventos para móvil
         >
           <img src={fingerprintImage} alt="Fingerprint" />
         </div>
